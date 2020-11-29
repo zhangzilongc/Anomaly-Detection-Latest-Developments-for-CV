@@ -1,4 +1,4 @@
-Anomaly Detection Learning Sources for CV
+Anomaly Detection Latest Developments for CV
 ====================================================
 
 *Anomaly detection* recently has attracted more and more attention in the field of computer vision. Current anomaly detection tasks of computer vision (*ADCV*) can be roughly divided into 2 classes.
