@@ -101,7 +101,7 @@ The image size allows users to use different window sizes, thereby the number of
 
 [8] `Magnetic Tile Dataset <https://github.com/Charmve/Surface-Defect-Detection/tree/master/Magnetic-Tile-Defect>`_\ :
 
-This is the datasets of the paper "Saliency of magnetic tile surface defects" The images of 6 common magnetic tile defects were collected, and their pixel level ground-truth were labeled.
+This is the datasets of the paper "Saliency of magnetic tile surface defects". The images of 6 common magnetic tile defects were collected, and their pixel level ground-truth were labeled.
 
 More information can refer to [`Surface defect saliency of magnetic tile <https://link.springer.com/article/10.1007/s00371-018-1588-5>`_].
 
@@ -152,7 +152,9 @@ More information can refer to  [`Identifying Medical Diagnoses and Treatable Dis
 1.2. Video Datasets
 ^^^^^^^^^^^^^^^^^^
 
+
 [1] `Driver-Anomaly-Detection <https://www.ei.tum.de/mmk/dad/>`_\ :
+
 The DAD dataset is recorded by using a driving simulator. The driving simulator contains a real BMW car cockpit, and the subjects are instructed to drive in a computer game that is projected in front of the car. Two Infineon CamBoard pico flexx cameras are placed on top and in front of the driver. The front camera is installed to record the drivers' head, body and visible part of the hands (left hand is mostly obscured by the driving wheel), while top camera is installed to focus on the drivers' hand movements. The dataset is recorded in synchronized depth and infrared modalities with the resolution of 224 x 171 pixels and frame rate of 45 fps.
 
 For the dataset recording, 31 subjects are asked to drive in a computer game performing either normal driving or anomalous driving. The training set contains recordings of 25 subjects and each subject has 6 normal driving and 8 anomalous driving video recordings. Each normal driving video lasts about 3.5 minutes and each anomalous driving video lasts about 30 seconds containing a different distracting action. In total, there are around 550 minutes recording for normal driving and 100 minutes recording of anomalous driving in the training set.
@@ -161,9 +163,60 @@ The test set contains 6 subjects and each subject has 6 video recordings lasting
 
 More information can refer to [`Driver Anomaly Detection: A Dataset and Contrastive Learning Approach <https://arxiv.org/pdf/2009.14660.pdf>`_].
 
-.. image:: ./Image/csm_DAD_simulator_36c4ae8d9e.png
-    :width: 400
 
+[2] `ShanghaiTech Campus dataset <https://github.com/StevenLiuWen/sRNN_TSC_Anomaly_Detection>`_\ :
+
+ShanghaiTech Campus dataset has 13 scenes with complex light conditions and camera angles. It contains 130 abnormal events and over 270, 000 training frames. Moreover, pixel level ground truth of abnormal events is also annotated in the dataset.
+
+There are 317398 frames in total including 300308 regularity frames and 17090 irregularity frames. And the total abnormal events are 130, and the scenes are 13.
+
+More information can refer to [`Video Anomaly Detection With Sparse Coding Inspired Deep Neural Networks <https://ieeexplore.ieee.org/document/8851288>`_].
+
+
+[3] `Avenue Dataset for Abnormal Event Detection <http://www.cse.cuhk.edu.hk/leojia/projects/detectabnormal/dataset.html>`_\ :
+
+Avenue Dataset contains 16 training and 21 testing video clips with a total of 47 abnormal events, including throwing objects, loitering and running. The apparent size of people may change because of the camera position and angle. The videos are captured in CUHK campus avenue with 30652 (15328 training, 15324 testing) frames in total.
+
+Video Description: The training videos capture normal situations. Testing videos include both normal and abnormal events. Three abnormal samples are shown as follows.
+
+Their dataset contains the following challenges: 1. Slight camera shake (in testing video 2, frame 1051 - 1100) presents. 2. A few outliers are included in training data. 3.Some normal patterns seldom appear in training data.
+
+More information can refer to [`Abnormal Event Detection at 150 FPS in Matlab <http://shijianping.me/abnormal_iccv13.pdf>`_].
+
+
+[4] `UCSD Anomaly Detection Dataset <http://www.svcl.ucsd.edu/projects/anomaly/dataset.html>`_\ :
+
+The UCSD Anomaly Detection Dataset was acquired with a stationary camera mounted at an elevation, overlooking pedestrian walkways. The crowd density in the walkways was variable, ranging from sparse to very crowded. In the normal setting, the video contains only pedestrians. Abnormal events are due to either:
+
+the circulation of **non pedestrian** entities in the walkways
+
+anomalous pedestrian motion patterns
+
+Commonly occurring anomalies include bikers, skaters, small carts, and people walking across a walkway or in the grass that surrounds it. A few instances of people in wheelchair were also recorded. All abnormalities are naturally occurring, i.e. they were not staged for the purposes of assembling the dataset.
+
+The data was split into 2 subsets, each corresponding to a different scene. The video footage recorded from each scene was split into various clips of around 200 frames.
+
+More information can refer to [`Anomaly Detection in Crowded Scenes <https://www.researchgate.net/publication/221362278_Anomaly_Detection_in_Crowded_Scenes>`_].
+
+
+[5] `LV Dataset <https://cvrleyva.wordpress.com/2017/04/08/lv-dataset/comment-page-1/#comment-240>`_\ :
+
+The LV dataset is a challenging dataset, where all videos are collected online and abnormal events are realistic. An abnormal frame is labelled as a true positive when at least 20% of abnormal regions of a frame is correctly detected, otherwise it is a false positive.
+
+And it comprises video sequences characterized by the following aspects: 1. Realistic events without actors performing predeﬁned scripts with a diverse subject interaction. 2. Highly unpredictable abnormal events in different scenes, some of them of very short duration. 3. Scenario correspondence, where the training and test data are captured from the same scene. 4. Challenging environmental conditions; sequences are acquired under changing illumination and camera motion.
+
+The LV dataset consists of 30 sequences with 14 different abnormal events. The abnormal events contain fighting, people clashing, arm robberies, thefts, car accidents, hit and runs, ﬁres, panic, vandalism, kidnapping, homicide, cars in the wrong-way, people falling, loitering, prohibited u-turns and trespassing.
+
+More information can refer to [`The LV dataset: A realistic surveillance video dataset for abnormal event detection <https://ieeexplore.ieee.org/document/7935096>`_].
+
+
+[6] `Anomalous Behavior Data Set <http://vision.eecs.yorku.ca/research/anomalous-behaviour-data/>`_\ :
+
+This website provides a data set for anomalous behaviour detection in video. The data set contains 8 image sequences that depict a wide range of challenging scenarios, including: illumination effects, scene clutter, variable target appearance, rapid motion and camera jitter. All sequences are available with manually constructed ground truth that identifies anomalous behaviour relative to a training portion of the video. Also provided is software for groundtruth construction and subsequent evaluation.
+
+The videos with groundtruth contain traffic-train, belleview, boat-sea, boat-river, subway-exit, canoe, caouflage and airport-wrongdir.
+
+More information can refer to [`Abnormal Event Detection at 150 FPS in Matlab <http://shijianping.me/abnormal_iccv13.pdf>`_].
 
 
 2. Papers
