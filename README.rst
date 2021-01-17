@@ -216,8 +216,6 @@ This website provides a data set for anomalous behaviour detection in video. The
 
 The videos with groundtruth contain traffic-train, belleview, boat-sea, boat-river, subway-exit, canoe, caouflage and airport-wrongdir.
 
-More information can refer to [`Abnormal Event Detection at 150 FPS in Matlab <http://shijianping.me/abnormal_iccv13.pdf>`_].
-
 
 2. Papers
 ---------
