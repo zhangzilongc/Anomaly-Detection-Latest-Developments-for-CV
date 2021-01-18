@@ -248,7 +248,7 @@ The videos with groundtruth contain traffic-train, belleview, boat-sea, boat-riv
 2.1 CV Overview & Survey
 ^^^^^^^^^^^^^^^^^^^^^
 
-[1]`An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos <https://arxiv.org/pdf/1801.03149.pdf>`_\ 
+[1] `An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos <https://arxiv.org/pdf/1801.03149.pdf>`_\ 
 
 2.2 2015-2016
 ^^^^^^^^^^^^^^^^^^^^^
