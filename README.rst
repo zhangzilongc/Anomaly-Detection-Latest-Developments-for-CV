@@ -24,21 +24,25 @@ Table of Contents
   
 * `2. Papers <#2-papers>`_
 
-  * `2.1. Overview & Survey <#21-overview--survey>`_
+  * `2.1. CV Overview & Survey <#21-cv-overview--survey>`_
   * `2.2. 2015-2016 <#22-2015-2016>`_
   
   
 1. Datasets
 ----------------
 
+
 The datasets about *ADCV* listed below contain the normal/target-class data (train) and the anomaly/other-classes data (test).
 
-**If the dataset offers the mask of the target region, the [Segmentation] label will be given. This means that the anomaly detection task can deployed on pixel-level.**
+**If the dataset offers the mask of the target region, the [Segmentation] label will be given. This means that the anomaly detection task can be deployed at pixel-level. [Common] means that the dataset is commonly used in the paper on anomaly detection. [New] means that the dataset is published recently.**
 
 1.1. Image Datasets
 ^^^^^^^^^^^^^^^^^^
 
+
 [1] All the classfication datasets (e.g. CIFAR10, CIFAR100, ImageNet, etc). Regard the certain class as the target class and regard other classes as the anomaly.
+
+[**Common**]
 
 
 [2] `MVTEC AD Dataset <https://www.mvtec.com/company/research/datasets/mvtec-ad/>`_\ :
@@ -49,7 +53,7 @@ It contains over 5000 high-resolution images divided into fifteen different obje
 
 More information can be found in the corresponding paper [`MVTec AD — A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection <https://openaccess.thecvf.com/content_CVPR_2019/papers/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.pdf>`_].
 
-[**Segmentation**]
+[**Segmentation**][**Common**][**New**]
 
 
 [3] `Concrete Crack Images <https://data.mendeley.com/datasets/5y9wdsg2zt/2>`_\ :
@@ -67,7 +71,9 @@ The dataset contains 2,624 samples of 300x300 pixels 8-bit grayscale images of f
 
 The defects in the annotated images are either of intrinsic or extrinsic type and are known to reduce the power efficiency of solar modules. All images are normalized with respect to size and perspective. Additionally, any distortion induced by the camera lens used to capture the EL images was eliminated prior to solar cell extraction. Every image is annotated with a defect probability (a floating point value between 0 and 1) and the type of the solar module (either mono- or polycrystalline) the solar cell image was originally extracted from. The individual images are stored in the images directory and the corresponding annotations in labels.csv.
 
-More information can refer to [`A Benchmark for Visual Identification of Defective Solar Cells in Electroluminescence Imagery <https://github.com/zae-bayern/elpv-dataset>`_].
+More information can refer to [`A Benchmark for Visual Identification of Defective Solar Cells in Electroluminescence Imagery <eupvsec-proceedings.com/proceedings?paper=45960>`_].
+
+[**New**]
 
 
 [5] `Kolektor Surface-Defect Dataset <https://www.vicos.si/Downloads/KolektorSDD>`_\ :
@@ -85,7 +91,9 @@ DeepPCB is a dataset contains 1,500 image pairs, each of which consists of a def
 
 Each annotated image owns an annotation file with the same filename, e.g.00041000_test.jpg, 00041000_temp.jpg and 00041000.txt are the tested image, template image and the corresponding annotation file. Each defect on the tested image are annotated as the format:x1,y1,x2,y2,type , where (x1,y1) and (x2,y2) is the top left and the bottom right corner of the bounding box of the defect. type is an integer ID that follows the matches: 0-background (not used), 1-open, 2-short, 3-mousebite, 4-spur, 5-copper, 6-pin-hole.
 
-More information can refer to [`ONLINE PCB DEFECT DETECTOR ON A NEW PCB DEFECT DATASET <https://github.com/zae-bayern/elpv-dataset>`_].
+More information can refer to [`ONLINE PCB DEFECT DETECTOR ON A NEW PCB DEFECT DATASET <https://arxiv.org/pdf/1902.06197.pdf>`_].
+
+[**New**]
 
 
 [7] `Fabric Defects Dataset: AITEX <https://www.aitex.es/afid/>`_\ :
@@ -108,15 +116,13 @@ More information can refer to [`Surface defect saliency of magnetic tile <https:
 [**Segmentation**]
 
 
-[9] `RSDDs: Rail Surface Defect Datasets <https://github.com/Charmve/Surface-Defect-Detection/tree/master/Magnetic-Tile-Defect>`_\ :
+[9] `RSDDs: Rail Surface Defect Datasets <https://github.com/Charmve/Surface-Defect-Detection>`_\ :
 
 The RSDDs dataset contains two types of datasets: the first is a type I RSDDs dataset captured from the fast lane, which contains 67 challenging images. The second is a Type II RSDDs dataset captured from a normal/heavy transportation track, which contains 128 challenging images.
 
 Each image of the two data sets contains at least one defect, and the background is complex and noisy.
 
 These defects in the RSDDs dataset have been marked by professional human observers in the field of track surface inspection.
-
-More information can refer to [`Surface Defect Detection: Dataset & Papers <https://github.com/Charmve/Surface-Defect-Detection#2-common-datasets-for-industrial-surface-defect-detection>`_].
 
 **Note that all the images are defect, but one can crop the normal region on the basis of the mask.**
 
@@ -163,6 +169,8 @@ The test set contains 6 subjects and each subject has 6 video recordings lasting
 
 More information can refer to [`Driver Anomaly Detection: A Dataset and Contrastive Learning Approach <https://arxiv.org/pdf/2009.14660.pdf>`_].
 
+[**New**]
+
 
 [2] `ShanghaiTech Campus dataset <https://github.com/StevenLiuWen/sRNN_TSC_Anomaly_Detection>`_\ :
 
@@ -172,8 +180,21 @@ There are 317398 frames in total including 300308 regularity frames and 17090 ir
 
 More information can refer to [`Video Anomaly Detection With Sparse Coding Inspired Deep Neural Networks <https://ieeexplore.ieee.org/document/8851288>`_].
 
+[**New**]
 
-[3] `Avenue Dataset for Abnormal Event Detection <http://www.cse.cuhk.edu.hk/leojia/projects/detectabnormal/dataset.html>`_\ :
+
+[3] `UCF-Crime dataset <https://webpages.uncc.edu/cchen62/dataset.html>`_\ :
+
+UCF-Crime dataset is a new large-scale first of its kind dataset of 128 hours of videos.
+
+It consists of 1900 long and untrimmed real-world surveillance videos, with 13 realistic anomalies including Abuse, Arrest, Arson, Assault, Road Accident, Burglary, Explosion, Fighting, Robbery, Shooting, Stealing, Shoplifting, and Vandalism. These anomalies are selected because they have a significant impact on public safety. This dataset can be used for two tasks. First, general anomaly detection considering all anomalies in one group and all normal activities in another group. Second, for recognizing each of 13 anomalous activities.
+
+More information can refer to [`Real-world Anomaly Detection in Surveillance Videos <https://arxiv.org/pdf/1801.04264.pdf>`_].
+
+[**New**]
+
+
+[4] `Avenue Dataset for Abnormal Event Detection <http://www.cse.cuhk.edu.hk/leojia/projects/detectabnormal/dataset.html>`_\ :
 
 Avenue Dataset contains 16 training and 21 testing video clips with a total of 47 abnormal events, including throwing objects, loitering and running. The apparent size of people may change because of the camera position and angle. The videos are captured in CUHK campus avenue with 30652 (15328 training, 15324 testing) frames in total.
 
@@ -183,14 +204,12 @@ Their dataset contains the following challenges: 1. Slight camera shake (in test
 
 More information can refer to [`Abnormal Event Detection at 150 FPS in Matlab <http://shijianping.me/abnormal_iccv13.pdf>`_].
 
+[**Common**]
 
-[4] `UCSD Anomaly Detection Dataset <http://www.svcl.ucsd.edu/projects/anomaly/dataset.html>`_\ :
 
-The UCSD Anomaly Detection Dataset was acquired with a stationary camera mounted at an elevation, overlooking pedestrian walkways. The crowd density in the walkways was variable, ranging from sparse to very crowded. In the normal setting, the video contains only pedestrians. Abnormal events are due to either:
+[5] `UCSD Anomaly Detection Dataset <http://www.svcl.ucsd.edu/projects/anomaly/dataset.html>`_\ :
 
-the circulation of **non pedestrian** entities in the walkways
-
-anomalous pedestrian motion patterns
+The UCSD Anomaly Detection Dataset was acquired with a stationary camera mounted at an elevation, overlooking pedestrian walkways. The crowd density in the walkways was variable, ranging from sparse to very crowded. In the normal setting, the video contains only pedestrians. Abnormal events are due to either: 1. The circulation of **non pedestrian** entities in the walkways. 2. Anomalous pedestrian motion patterns.
 
 Commonly occurring anomalies include bikers, skaters, small carts, and people walking across a walkway or in the grass that surrounds it. A few instances of people in wheelchair were also recorded. All abnormalities are naturally occurring, i.e. they were not staged for the purposes of assembling the dataset.
 
@@ -198,8 +217,10 @@ The data was split into 2 subsets, each corresponding to a different scene. The 
 
 More information can refer to [`Anomaly Detection in Crowded Scenes <https://www.researchgate.net/publication/221362278_Anomaly_Detection_in_Crowded_Scenes>`_].
 
+[**Common**]
 
-[5] `LV Dataset <https://cvrleyva.wordpress.com/2017/04/08/lv-dataset/comment-page-1/#comment-240>`_\ :
+
+[6] `LV Dataset <https://cvrleyva.wordpress.com/2017/04/08/lv-dataset/comment-page-1/#comment-240>`_\ :
 
 The LV dataset is a challenging dataset, where all videos are collected online and abnormal events are realistic. An abnormal frame is labelled as a true positive when at least 20% of abnormal regions of a frame is correctly detected, otherwise it is a false positive.
 
@@ -209,20 +230,25 @@ The LV dataset consists of 30 sequences with 14 different abnormal events. The a
 
 More information can refer to [`The LV dataset: A realistic surveillance video dataset for abnormal event detection <https://ieeexplore.ieee.org/document/7935096>`_].
 
+[**Common**]
 
-[6] `Anomalous Behavior Data Set <http://vision.eecs.yorku.ca/research/anomalous-behaviour-data/>`_\ :
+
+[7] `Anomalous Behavior Data Set <http://vision.eecs.yorku.ca/research/anomalous-behaviour-data/>`_\ :
 
 This website provides a data set for anomalous behaviour detection in video. The data set contains 8 image sequences that depict a wide range of challenging scenarios, including: illumination effects, scene clutter, variable target appearance, rapid motion and camera jitter. All sequences are available with manually constructed ground truth that identifies anomalous behaviour relative to a training portion of the video. Also provided is software for groundtruth construction and subsequent evaluation.
 
 The videos with groundtruth contain traffic-train, belleview, boat-sea, boat-river, subway-exit, canoe, caouflage and airport-wrongdir.
 
+[**Common**]
+
 
 2. Papers
 ---------
 
-2.1 Overview & Survey
+2.1 CV Overview & Survey
 ^^^^^^^^^^^^^^^^^^^^^
-Coming Soon
+
+[1]`An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos <https://arxiv.org/pdf/1801.03149.pdf>`_
 
 2.2 2015-2016
 ^^^^^^^^^^^^^^^^^^^^^
